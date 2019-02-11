@@ -9,6 +9,7 @@
 #import "DLEntryListTableViewController.h"
 #import "DLEntryController.h"
 #import "DLEntry.h"
+#import "DLEntryDetailViewController.h"
 
 @interface DLEntryListTableViewController ()
 
@@ -19,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -46,7 +52,15 @@
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    
+    if ([segue.identifier isEqualToString:@"toDetailVC"]) {
+        DLEntryDetailViewController *detailVC = segue.destinationViewController;
+        NSIndexPath *index  = [self.tableView indexPathForSelectedRow];
+        DLEntry *entryToSent = [[DLEntryController sharedInstance]entries][index.row];
+        
+        detailVC.entry  = entryToSent;
+    }
+    
 }
 
 

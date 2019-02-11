@@ -38,6 +38,4 @@
     [_entries removeObject:entry];
 }
 
-
-
 @end
