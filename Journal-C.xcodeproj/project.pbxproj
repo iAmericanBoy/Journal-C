@@ -10,6 +10,7 @@
 		B6252E91221213B1005683C1 /* DLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = B6252E90221213B1005683C1 /* DLEntry.m */; };
 		B6252E9A221216B6005683C1 /* DLEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6252E99221216B6005683C1 /* DLEntryController.m */; };
 		B6252E9D22121E98005683C1 /* DLEntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6252E9C22121E98005683C1 /* DLEntryListTableViewController.m */; };
+		B6252EA1221227DF005683C1 /* DLEntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6252EA0221227DF005683C1 /* DLEntryDetailViewController.m */; };
 		B6EBBC7C221210AC009167FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBC7B221210AC009167FC /* AppDelegate.m */; };
 		B6EBBC82221210AC009167FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBC80221210AC009167FC /* Main.storyboard */; };
 		B6EBBC84221210AF009167FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBC83221210AF009167FC /* Assets.xcassets */; };
@@ -24,6 +25,8 @@
 		B6252E99221216B6005683C1 /* DLEntryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLEntryController.m; sourceTree = "<group>"; };
 		B6252E9B22121E98005683C1 /* DLEntryListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLEntryListTableViewController.h; sourceTree = "<group>"; };
 		B6252E9C22121E98005683C1 /* DLEntryListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLEntryListTableViewController.m; sourceTree = "<group>"; };
+		B6252E9F221227DF005683C1 /* DLEntryDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLEntryDetailViewController.h; sourceTree = "<group>"; };
+		B6252EA0221227DF005683C1 /* DLEntryDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLEntryDetailViewController.m; sourceTree = "<group>"; };
 		B6EBBC77221210AC009167FC /* Journal-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EBBC7A221210AC009167FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6EBBC7B221210AC009167FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 			children = (
 				B6252E9B22121E98005683C1 /* DLEntryListTableViewController.h */,
 				B6252E9C22121E98005683C1 /* DLEntryListTableViewController.m */,
+				B6252E9F221227DF005683C1 /* DLEntryDetailViewController.h */,
+				B6252EA0221227DF005683C1 /* DLEntryDetailViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6252EA1221227DF005683C1 /* DLEntryDetailViewController.m in Sources */,
 				B6252E9A221216B6005683C1 /* DLEntryController.m in Sources */,
 				B6252E91221213B1005683C1 /* DLEntry.m in Sources */,
 				B6EBBC8A221210AF009167FC /* main.m in Sources */,

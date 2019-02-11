@@ -11,9 +11,9 @@
 
 @interface DLEntry : NSObject<NSCoding>
 
-@property(nonatomic,copy, readonly)NSString *title;
-@property(nonatomic,copy, readonly)NSString *bodyText;
-@property(nonatomic,copy, readonly)NSDate *timeStamp;
+@property(nonatomic,strong)NSString *title;
+@property(nonatomic,strong)NSString *bodyText;
+@property(nonatomic,strong)NSDate *timeStamp;
 
 -(instancetype)initWithName:(NSString *)title
                    bodyText:(NSString *) body;
