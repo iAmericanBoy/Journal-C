@@ -46,6 +46,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         DLEntry *entry = [[[DLEntryController sharedInstance] entries] objectAtIndex:indexPath.row];
         [[DLEntryController sharedInstance] removeEntry:(entry)];
+        [self.tableView reloadData];
     }
 }
 
@@ -60,7 +61,6 @@
         
         detailVC.entry  = entryToSent;
     }
-    
 }
 
 
