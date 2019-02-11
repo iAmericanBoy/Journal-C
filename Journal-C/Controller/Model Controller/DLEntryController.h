@@ -17,6 +17,7 @@
 
 - (void)addEntry:(DLEntry *)entry;
 - (void)removeEntry:(DLEntry *)entry;
+- (instancetype)init;
 
 
 

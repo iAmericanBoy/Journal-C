@@ -10,6 +10,15 @@
 
 @implementation DLEntryController
 
+-(instancetype)init
+{
+    self = [super init];
+    if(self) {
+        _entries = [NSMutableArray alloc];
+    }
+    return self;
+}
+
 + (DLEntryController *)sharedInstance {
     static DLEntryController *sharedInstance = nil;
     static dispatch_once_t onceToken;
