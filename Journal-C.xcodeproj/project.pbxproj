@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B6252E91221213B1005683C1 /* DLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = B6252E90221213B1005683C1 /* DLEntry.m */; };
+		B6252E9A221216B6005683C1 /* DLEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6252E99221216B6005683C1 /* DLEntryController.m */; };
 		B6EBBC7C221210AC009167FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6EBBC7B221210AC009167FC /* AppDelegate.m */; };
 		B6EBBC82221210AC009167FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBC80221210AC009167FC /* Main.storyboard */; };
 		B6EBBC84221210AF009167FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EBBC83221210AF009167FC /* Assets.xcassets */; };
@@ -18,6 +19,8 @@
 /* Begin PBXFileReference section */
 		B6252E8F221213B1005683C1 /* DLEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLEntry.h; sourceTree = "<group>"; };
 		B6252E90221213B1005683C1 /* DLEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLEntry.m; sourceTree = "<group>"; };
+		B6252E98221216B6005683C1 /* DLEntryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLEntryController.h; sourceTree = "<group>"; };
+		B6252E99221216B6005683C1 /* DLEntryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLEntryController.m; sourceTree = "<group>"; };
 		B6EBBC77221210AC009167FC /* Journal-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EBBC7A221210AC009167FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6EBBC7B221210AC009167FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +62,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B6252E962212165F005683C1 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6252E98221216B6005683C1 /* DLEntryController.h */,
+				B6252E99221216B6005683C1 /* DLEntryController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		B6252E972212166F005683C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6252E962212165F005683C1 /* Model Controller */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B6EBBC6E221210AC009167FC = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +102,7 @@
 				B6EBBC7B221210AC009167FC /* AppDelegate.m */,
 				B6252E92221213B6005683C1 /* Model */,
 				B6EBBC90221210E2009167FC /* Views */,
+				B6252E972212166F005683C1 /* Controller */,
 				B6252E8E22121171005683C1 /* Resources */,
 			);
 			path = "Journal-C";
@@ -165,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6252E9A221216B6005683C1 /* DLEntryController.m in Sources */,
 				B6252E91221213B1005683C1 /* DLEntry.m in Sources */,
 				B6EBBC8A221210AF009167FC /* main.m in Sources */,
 				B6EBBC7C221210AC009167FC /* AppDelegate.m in Sources */,
@@ -311,7 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6B8ZX28ZW;
-				INFOPLIST_FILE = "Journal-C/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-C/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6B8ZX28ZW;
-				INFOPLIST_FILE = "Journal-C/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-C/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

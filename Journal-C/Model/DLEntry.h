@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface DLEntry : NSObject
+@interface DLEntry : NSObject<NSCoding>
 
 @property(nonatomic,copy, readonly)NSString *title;
 @property(nonatomic,copy, readonly)NSString *bodyText;
@@ -17,7 +17,8 @@
 
 -(instancetype)initWithName:(NSString *)title
                    bodyText:(NSString *) body;
-
+-(instancetype)initWithCoder:(NSCoder *)aDecoder;
+-(void)encodeWithCoder:(NSCoder *)aCoder;
 
 @end
 

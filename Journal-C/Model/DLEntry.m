@@ -20,4 +20,23 @@
     }
     return self;
 }
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if (self){
+        _title = [aDecoder decodeObjectForKey:@"title"];
+        _bodyText = [aDecoder decodeObjectForKey:@"body"];
+        _timeStamp = [aDecoder decodeObjectForKey:@"timeStamp"];
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    _title = [aCoder decodeObjectForKey:@"title"];
+    _bodyText = [aCoder decodeObjectForKey:@"body"];
+    _timeStamp = [aCoder decodeObjectForKey:@"timeStamp"];
+}
+
 @end
