@@ -38,4 +38,11 @@
     [_entries removeObject:entry];
 }
 
+-(void)updateEntry:(DLEntry *)entry withTitle:(NSString *)title andBody:(NSString *)body
+{
+    entry.title = title;
+    entry.bodyText = body;
+    //save
+}
+
 @end

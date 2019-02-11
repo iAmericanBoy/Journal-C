@@ -28,18 +28,14 @@
 {
         if (_entry) {
             //update
-            _entry.title = _titleTextField.text;
-            _entry.bodyText = _bodyTextView.text;
+            [[DLEntryController sharedInstance] updateEntry:_entry withTitle:_titleTextField.text andBody:_bodyTextView.text];
         } else {
             //new
             DLEntry * entry = [[DLEntry alloc] initWithName:_titleTextField.text bodyText:_bodyTextView.text];
             [[DLEntryController sharedInstance] addEntry:entry];
             _entry = entry;
-            
         }
     [self.navigationController popViewControllerAnimated:true];
-
-
 }
 
 -(void)updateView
