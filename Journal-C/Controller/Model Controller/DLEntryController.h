@@ -12,9 +12,10 @@
 
 @interface DLEntryController : NSObject
 
-@property(nonatomic,copy,readonly)NSMutableArray *entries;
-@property(nonatomic,copy,readonly)DLEntryController *sharedInstance;
 
++(DLEntryController *)sharedInstance;
+
+@property(nonatomic,strong,readonly)NSMutableArray *entries;
 - (void)addEntry:(DLEntry *)entry;
 - (void)removeEntry:(DLEntry *)entry;
 - (instancetype)init;
