@@ -21,6 +21,8 @@
           withTitle:(NSString *)title
             andBody:(NSString *)body;
 - (instancetype)init;
+- (void)saveToPersistentStore;
+- (void)loadFromPersistentStore;
 
 @end
 

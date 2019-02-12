@@ -15,6 +15,7 @@
     self = [super init];
     if(self) {
         _entries = [NSMutableArray array];
+        [self loadFromPersistentStore];
     }
     return self;
 }
@@ -31,18 +32,34 @@
 - (void)addEntry:(DLEntry *)entry
 {
     [_entries addObject: entry];
+    [self saveToPersistentStore];
 }
 
 -(void)removeEntry:(DLEntry *)entry
 {
     [_entries removeObject:entry];
+    [self saveToPersistentStore];
 }
 
 -(void)updateEntry:(DLEntry *)entry withTitle:(NSString *)title andBody:(NSString *)body
 {
     entry.title = title;
     entry.bodyText = body;
-    //save
+    [self saveToPersistentStore];
+}
+
+-(void)saveToPersistentStore
+{   
+    NSData *dataToSave = [NSKeyedArchiver archivedDataWithRootObject:_entries];
+    [[NSUserDefaults standardUserDefaults] setObject:dataToSave forKey:@"savedEntries"];
+}
+
+-(void) loadFromPersistentStore
+{
+    NSData *dataToDecode = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedEntries"];
+    if (dataToDecode) {
+        _entries = [NSKeyedUnarchiver unarchiveObjectWithData:dataToDecode] ;
+    }
 }
 
 @end

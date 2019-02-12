@@ -34,9 +34,9 @@
 
 -(void)encodeWithCoder:(NSCoder *)aCoder
 {
-    _title = [aCoder decodeObjectForKey:@"title"];
-    _bodyText = [aCoder decodeObjectForKey:@"body"];
-    _timeStamp = [aCoder decodeObjectForKey:@"timeStamp"];
+    [aCoder encodeObject:_title forKey:@"title"];
+    [aCoder encodeObject:_bodyText forKey:@"body"];
+    [aCoder encodeObject:_timeStamp forKey:@"timeStamp"];
 }
 
 @end
